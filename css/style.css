@@ -2,7 +2,6 @@
 
   html {
     box-sizing: border-box;
-    font-family: 'Manrope', sans-serif;
     background-color: #f9f9f9;
   }
     
@@ -20,12 +19,24 @@
   }
 
 /* --- 2. FONTS --- */
+  body {
+    font-family: 'Manrope', sans-serif;
+  }
+
+  h1, h2 {
+    font-weight: 400;
+  }
+
   h1 {
     font-size: 8em;
+    font-weight: 400;
+
   }
 
   h2 {
     font-size: 4em;
+    font-weight: 400;
+
   }
 
   p {
@@ -65,6 +76,7 @@
 
   .footer-container {
     border-top: 4px solid #1099ff;
+
   }
 
   .nav-container li {
@@ -83,14 +95,65 @@
 
   /* COVERPAGE */
     .coverpage {
-      background-color: inherit;
       min-height: calc(100vh - 100px); /* means section height isn't increased by navbar */
-    }
+          }
+    
+    /* red circle */
+    .coverpage::before {
+      z-index: -1;
+      content: '';
+      position: absolute;  
+      width: 340px;
+      height: 340px;
+      border-radius: 100%;
+      background: #ff1e00;
+      right: 23%;
+      bottom: 15%;
+    } 
+    /* white circle */
+    .coverpage::after {
+      z-index: -1;
+      content: '';
+      position: absolute;  
+      width: 490px;
+      height: 490px;
+      border-radius: 100%;
+      background: white;
+      left: -5%;
+      top: 20%;
+    } 
+
   /* WHO*/
     .who {
       background-color: #ffffff;
+      overflow: hidden; /* stops image creating scrollbar */
+
     }
-  
+
+    .who div {
+      padding-bottom: 50px;
+    }
+    #outer_selfie {
+      position: relative;
+      height: 120px; /* adds space below to mean image will show but be cropped */
+    }
+
+    /* this makes the img and it's containing div the same size meaning you can use mix-blend-mode */
+    #selfie, #selfie img {
+      height: 300px;
+      border-radius: 100%;
+    }
+    #selfie {
+      position: absolute;
+      left: 50%;
+      background-color: #ff1e00;
+    }
+
+    #selfie img {
+      mix-blend-mode: screen;
+      
+    }
+
   /* WHY */
     .why {
       text-align: right;
