@@ -1,0 +1,104 @@
+/* --- 1. GENERAL --- */
+
+  html {
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f9f9f9;
+  }
+    
+  *, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  section {
+    margin: 0 auto;
+    padding: 10% 17.5%; /* main container width set by the % */
+    min-height: 100vh;
+    overflow: auto; /* section adjusts to content's height */
+  }
+
+/* --- 2. FONTS --- */
+  h1 {
+    font-size: 8em;
+  }
+
+  h2 {
+    font-size: 4em;
+  }
+
+  p {
+    font-size: 1.5em;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+  }
+
+  .bluetext {
+    color: #1099ff;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1099ff;
+    font-size: 16px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* --- 3. NAVBAR and FOOTER--- */
+  .nav-container, .footer-container {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 60px;
+    height: 100px;
+    padding: 0px 50px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .nav-container {
+    border-bottom: 4px solid #1099ff;
+  }
+
+  .footer-container {
+    border-top: 4px solid #1099ff;
+  }
+
+  .nav-container li {
+    margin: auto; 
+  }
+
+  .footer-container li {
+    margin: auto 0;
+  }
+
+  .nav-container li:first-child {
+    flex-grow: 2;
+  }
+
+/* --- 4. SECTION STYLES */
+
+  /* COVERPAGE */
+    .coverpage {
+      background-color: inherit;
+      min-height: calc(100vh - 100px); /* means section height isn't increased by navbar */
+    }
+  /* WHO*/
+    .who {
+      background-color: #ffffff;
+    }
+  
+  /* WHY */
+    .why {
+      text-align: right;
+    }
+
+/* --- MEDIA QUERIES --- */
+
+@media all and (max-width: 600px) {  
+      
+  
+}
