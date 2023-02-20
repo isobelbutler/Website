@@ -18,6 +18,11 @@
     overflow: auto; /* section adjusts to content's height */
   }
 
+  section:first-child {
+    min-height: calc(100vh - 100px); /* means first section height isn't increased by navbar - very sexy */
+        }
+  
+
 /* --- 2. FONTS --- */
   body {
     font-family: 'Manrope', sans-serif;
@@ -94,9 +99,6 @@
 /* --- 4. SECTION STYLES */
 
   /* COVERPAGE */
-    .coverpage {
-      min-height: calc(100vh - 100px); /* means section height isn't increased by navbar */
-          }
     
     /* red circle */
     .coverpage::before {
@@ -161,7 +163,18 @@
 
 /* --- MEDIA QUERIES --- */
 
-@media all and (max-width: 600px) {  
+@media all and (max-width: 1200px) {  
+
+  .nav-container li:first-child {
+    display: none;
+  }
       
-  
+  .nav-container, .footer-container {
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+    gap: 20px;
+    padding: 30px 0;
+  }
 }
