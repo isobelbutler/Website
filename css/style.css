@@ -26,6 +26,7 @@
 /* --- 2. FONTS --- */
   body {
     font-family: 'Manrope', sans-serif;
+    /* font-family: 'neue_haas_grotesk_display65Md'; */
   }
 
   h1, h2 {
@@ -37,6 +38,10 @@
     font-weight: 400;
 
   }
+  .highlight-white {
+    /* background-color: #f9f9f9; */
+    opacity: 60%;
+  }
 
   h2 {
     font-size: 4em;
@@ -44,19 +49,26 @@
 
   }
 
-  p {
-    font-size: 1.5em;
+  p, .who a {
+    font-size: 1.5rem;
     margin: 1.5rem 0;
     line-height: 1.5;
+    color: #1A1A1A;
+  }
+
+  .who a {
+    text-decoration: underline;
   }
 
   .bluetext {
-    color: #1099ff;
+    /* color: #1099ff; */
+    color: #1C73E8;
   }
 
   a {
     text-decoration: none;
-    color: #1099ff;
+    text-transform: uppercase;
+    color: #62615F;
     font-size: 16px;
   }
   a:hover {
@@ -76,11 +88,11 @@
   }
 
   .nav-container {
-    border-bottom: 4px solid #1099ff;
+    border-bottom: 2px solid #62615F;
   }
 
   .footer-container {
-    border-top: 4px solid #1099ff;
+    border-top: 2px solid #62615F;
 
   }
 
@@ -108,7 +120,9 @@
       width: 340px;
       height: 340px;
       border-radius: 100%;
-      background: #ff1e00;
+      /* background: #FA5B52; */
+      background: #077467;
+      
       right: 23%;
       bottom: 15%;
     } 
@@ -120,20 +134,27 @@
       width: 490px;
       height: 490px;
       border-radius: 100%;
-      background: white;
+      background: #94CC9F;
+      /* background: #F8CFC6; */
+
       left: -5%;
       top: 20%;
     } 
 
   /* WHO*/
     .who {
-      background-color: #ffffff;
+      background-color: #E9E7E2;
       overflow: hidden; /* stops image creating scrollbar */
 
     }
 
     .who div {
       padding-bottom: 50px;
+    }
+
+    .who p {
+      width: 100%;
+      text-align: justify;
     }
     #outer_selfie {
       position: relative;
@@ -148,19 +169,37 @@
     #selfie {
       position: absolute;
       left: 50%;
-      background-color: #ff1e00;
+      /* background-color: #FA5B52; */
     }
 
     #selfie img {
-      mix-blend-mode: screen;
+      /* mix-blend-mode: screen; */
       
     }
 
+  /* SELFIE-1 */
+    .selfie-1 {
+      /* background-image: url('../images/profile_img.PNG');
+      background-size: cover;
+      background-position: 0 50%; */
+      background-color: #077467;
+      min-height: 50vh;
+
+    }
   /* WHY */
     .why {
       text-align: right;
     }
 
+  /* FOUNDERS */
+
+  .founders {
+    background-color: #E9E7E2;
+  }
+
+  .founders p {
+    text-align: justify;
+  }
 /* --- MEDIA QUERIES --- */
 
 @media all and (max-width: 1200px) {  
