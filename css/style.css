@@ -22,65 +22,87 @@
     min-height: calc(100vh - 100px); /* means first section height isn't increased by navbar - very sexy */
         }
   
-
 /* --- 2. FONTS --- */
-  body {
-    font-family: 'Manrope', sans-serif;
-    /* font-family: 'neue_haas_grotesk_display65Md'; */
-  }
+    
+    body {
+      /* font-family: 'Manrope', sans-serif; */
+      font-family: 'neue_haas_grotesk_display65Md';
+    }
 
-  h1, h2 {
-    font-weight: 400;
-  }
+    h1 {
+      text-align: center;
+      color:#FE4632;
+      z-index: 1;
+      margin-top: -100px;
+    }
 
-  h1 {
-    font-size: 8em;
-    font-weight: 400;
+    h2 {
+      /* font-family: 'neue_haas_grotesk_display75Bd'; */
+    }
 
-  }
-  .highlight-white {
-    /* background-color: #f9f9f9; */
-    opacity: 60%;
-  }
+    h1, h2 {
+      font-size: 4em;
+      font-weight: 400;
+    }
 
-  h2 {
-    font-size: 4em;
-    font-weight: 400;
+    p, .who a {
+      font-family: 'neue_haas_grotesk_display45Lt';
+      font-size: 1.5rem;
+      margin: 1.5rem 0;
+      line-height: 1.5;
+      color: #1A1A1A;
+    }
 
-  }
+    /* links */
+    a {
+      /* font-family: 'Courier New', Courier, monospace; */
+      text-decoration: none;
+      text-transform: lowercase;
+      font-weight: 700;
+      color: #ECB08C;
+      font-size: 1.7em;
+    }
 
-  p, .who a {
-    font-size: 1.5rem;
-    margin: 1.5rem 0;
-    line-height: 1.5;
-    color: #1A1A1A;
-  }
+    /* navlink hover, link to other website,  */
+    .who a, a:hover {
+      text-decoration: underline;
+    }
 
-  .who a {
-    text-decoration: underline;
-  }
+    .who a {font-weight: 400;}
 
-  .bluetext {
-    /* color: #1099ff; */
-    color: #1C73E8;
-  }
+    /* coloured text - Headings */
+    .bluetext {
+      /* color: #1099ff; */
+      color: #FA5B52;
+    }
 
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #62615F;
-    font-size: 16px;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+    .white-highlight {
+      background-color: #E9E7E2;
+    }
+
+    .line-through {
+      text-decoration: line-through;
+    }
+
+    /* WHO title */
+    .who h2 {
+      font-size: 3em;
+    }
+    /* WHO body */
+    .who p {
+      text-align: justify;
+    }
+
+   
+
   
-  /* --- 3. NAVBAR and FOOTER--- */
+/* --- 3. NAVBAR and FOOTER--- */
+
   .nav-container, .footer-container {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 40px;
     height: 100px;
     padding: 0px 50px;
     width: 90%;
@@ -88,20 +110,16 @@
   }
 
   .nav-container {
-    border-bottom: 2px solid #62615F;
+    /* border-bottom: 2px solid #E9E7E2; */
+    width: 100%;
   }
 
   .footer-container {
     border-top: 2px solid #62615F;
-
   }
 
-  .nav-container li {
-    margin: auto; 
-  }
-
-  .footer-container li {
-    margin: auto 0;
+  .nav-container li, .footer-container li {
+    margin: auto 0; 
   }
 
   .nav-container li:first-child {
@@ -111,51 +129,48 @@
 /* --- 4. SECTION STYLES */
 
   /* COVERPAGE */
-    
-    /* red circle */
-    .coverpage::before {
-      z-index: -1;
-      content: '';
-      position: absolute;  
-      width: 340px;
-      height: 340px;
-      border-radius: 100%;
-      /* background: #FA5B52; */
-      background: #077467;
-      
-      right: 23%;
-      bottom: 15%;
-    } 
-    /* white circle */
-    .coverpage::after {
-      z-index: -1;
-      content: '';
-      position: absolute;  
-      width: 490px;
-      height: 490px;
-      border-radius: 100%;
-      background: #94CC9F;
-      /* background: #F8CFC6; */
 
-      left: -5%;
-      top: 20%;
-    } 
+  .coverpage {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  }
+
+  .coverpage, header { 
+    /* background-image: url('../images/garden.png');
+    background-size: cover;
+    background-position: 0 40%; */
+    /* opacity: 40%;  */
+    background-color: #F2F2EF;
+   }
 
   /* WHO*/
     .who {
       background-color: #E9E7E2;
       overflow: hidden; /* stops image creating scrollbar */
-
+      display: flex;
+      flex-direction: column;      
+      padding: 10% 5%;
+      gap: 60px;
+      position: relative; /* allows you to add pseudo elements */
     }
 
-    .who div {
-      padding-bottom: 50px;
+    .who p:first-child {
+      border-top: 1px solid #62615F;
+      padding-top: 2em;
     }
 
-    .who p {
-      width: 100%;
-      text-align: justify;
+    /* NB - MAYBE CHANGE TO GRID AND ADD AN IMAGE TOP RIGHT OF THIS SECTION? */
+    .who-flex-1 {
+      width: 45%;
     }
+
+    .who-flex-2 {
+      margin: 0 auto;
+      width: 70%;
+    }
+
     #outer_selfie {
       position: relative;
       height: 120px; /* adds space below to mean image will show but be cropped */
@@ -174,21 +189,24 @@
 
     #selfie img {
       /* mix-blend-mode: screen; */
-      
     }
 
-  /* SELFIE-1 */
-    .selfie-1 {
-      /* background-image: url('../images/profile_img.PNG');
+  /* BLOCK SECTION - image or colour */
+    .block-1 {
+      /* background-image: url('../images/garden.png');
       background-size: cover;
-      background-position: 0 50%; */
-      background-color: #077467;
-      min-height: 50vh;
+      background-position: 0 30%; */
+      background-color: #231F20;
+      min-height: 80vh;
+    }
 
+    .block-2 {
+      background-color: #FA5B52;
+      min-height: 80vh;
     }
   /* WHY */
     .why {
-      text-align: right;
+      text-align: center;
     }
 
   /* FOUNDERS */
@@ -200,7 +218,50 @@
   .founders p {
     text-align: justify;
   }
-/* --- MEDIA QUERIES --- */
+
+/* PSEUDO ELEMENTS */
+
+/* red circle  */
+.coverpage::before {
+  /* z-index: -1; */
+  content: '';
+  position: absolute;  
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+   background: #FA5B52;
+  
+  right: 23%;
+  top: 25%;
+} 
+
+.who::before {
+  content: '';
+  position: absolute;  
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #FA5B52;
+  right: 40%;
+  bottom: 10%;
+}
+
+ /* white circle  */
+/* .coverpage::after {
+  z-index: 1;
+  content: '';
+  position: absolute;  
+  width: 490px;
+  height: 490px;
+  border-radius: 100%;
+  background: #A5997E;
+
+  left: -5%;
+  top: 20%;
+}  */
+
+
+  /* --- MEDIA QUERIES --- */
 
 @media all and (max-width: 1200px) {  
 
