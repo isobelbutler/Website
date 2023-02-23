@@ -25,15 +25,14 @@
 /* --- 2. FONTS --- */
     
     body {
-      /* font-family: 'Manrope', sans-serif; */
-      font-family: 'neue_haas_grotesk_display65Md';
+      font-family: 'neue_haas_grotesk_display65Md', 'Manrope', sans-serif;
     }
 
     h1 {
       text-align: center;
       color:#FE4632;
       z-index: 1;
-      margin-top: -100px;
+      margin-top: -100px; /* means nav doesn't affect vertical centering of h1 */
     }
 
     h2 {
@@ -45,8 +44,20 @@
       font-weight: 400;
     }
 
+    h3 {
+      font-size: 2em;
+      color: #F2F2EF;
+      
+    }
+
+    h4 {
+      font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+      font-size: 1.5em;
+      color: #F2F2EF;
+    }
+
     p, .who a {
-      font-family: 'neue_haas_grotesk_display45Lt';
+      font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
       font-size: 1.5rem;
       margin: 1.5rem 0;
       line-height: 1.5;
@@ -55,7 +66,6 @@
 
     /* links */
     a {
-      /* font-family: 'Courier New', Courier, monospace; */
       text-decoration: none;
       text-transform: lowercase;
       font-weight: 700;
@@ -68,12 +78,18 @@
       text-decoration: underline;
     }
 
-    .who a {font-weight: 400;}
+    .who a {
+      font-weight: 400;}
 
     /* coloured text - Headings */
-    .bluetext {
+    .bluetext, .interests h4 {
       /* color: #1099ff; */
       color: #FA5B52;
+    }
+
+    .interests div p {
+      font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+      font-size: 1em;
     }
 
     .white-highlight {
@@ -84,7 +100,6 @@
       text-decoration: line-through;
     }
 
-    /* WHO title */
     .who h2 {
       font-size: 3em;
     }
@@ -93,7 +108,9 @@
       text-align: justify;
     }
 
-   
+    .founders p {
+      text-align: justify;
+    }
 
   
 /* --- 3. NAVBAR and FOOTER--- */
@@ -105,21 +122,16 @@
     gap: 40px;
     height: 100px;
     padding: 0px 50px;
-    width: 90%;
     margin: 0 auto;
   }
 
-  .nav-container {
-    /* border-bottom: 2px solid #E9E7E2; */
-    width: 100%;
-  }
-
   .footer-container {
-    border-top: 2px solid #62615F;
+    z-index: 100;
   }
 
   .nav-container li, .footer-container li {
     margin: auto 0; 
+    z-index: 100;
   }
 
   .nav-container li:first-child {
@@ -145,7 +157,7 @@
     background-color: #F2F2EF;
    }
 
-  /* WHO*/
+  /* WHO */
     .who {
       background-color: #E9E7E2;
       overflow: hidden; /* stops image creating scrollbar */
@@ -198,12 +210,56 @@
       background-position: 0 30%; */
       background-color: #231F20;
       min-height: 80vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+      align-items: center;
+    }
+
+    .icon1, .icon2 {
+      text-align: center;
+    }
+
+    .icon1 {
+      grid-column-start: span 5;
+    }
+
+    .icon2 {
+      grid-row: 2;
+    }
+
+    .icon2 img {
+      width: 40%;
+      filter: invert(100);
+      opacity: 80%;
+      padding-bottom: 30px;
+    }
+
+  /* WHO 2 */
+    .interests {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; 
+      gap: 40px;
+      background-color: #F8DFDA;
+    }
+
+    .interests div {
+      /* text-align: justify; */
+    }
+
+    .interests div:last-child {
+      text-align: center;
     }
 
     .block-2 {
       background-color: #FA5B52;
       min-height: 80vh;
     }
+
+    .interests div img {
+      max-width: 80%;
+      border-radius: 100%;
+    }
+
   /* WHY */
     .why {
       text-align: center;
@@ -211,55 +267,35 @@
 
   /* FOUNDERS */
 
-  .founders {
-    background-color: #E9E7E2;
-  }
-
-  .founders p {
-    text-align: justify;
-  }
+  .founders, .footer-container {
+      background-color: #E9E7E2;
+    }
 
 /* PSEUDO ELEMENTS */
 
-/* red circle  */
-.coverpage::before {
+  /* red circle  */
+  .coverpage::before {
   /* z-index: -1; */
   content: '';
   position: absolute;  
   width: 70px;
   height: 70px;
   border-radius: 100%;
-   background: #FA5B52;
-  
-  right: 23%;
-  top: 25%;
-} 
-
-.who::before {
-  content: '';
-  position: absolute;  
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
   background: #FA5B52;
-  right: 40%;
-  bottom: 10%;
-}
+  right: 23%;
+  top: 23%;
+  } 
 
- /* white circle  */
-/* .coverpage::after {
-  z-index: 1;
-  content: '';
-  position: absolute;  
-  width: 490px;
-  height: 490px;
-  border-radius: 100%;
-  background: #A5997E;
-
-  left: -5%;
-  top: 20%;
-}  */
-
+  .who::before {
+    content: '';
+    position: absolute;  
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #FA5B52;
+    right: 33%;
+    bottom: 7%;
+  }
 
   /* --- MEDIA QUERIES --- */
 
