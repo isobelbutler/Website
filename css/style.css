@@ -246,7 +246,7 @@
       /* text-align: justify; */
     }
 
-    .interests div:last-child {
+    .interests div:nth-child(3) {
       text-align: center;
     }
 
@@ -261,8 +261,11 @@
     }
 
   /* WHY */
-    .why {
+    .why h2 {
       text-align: center;
+    }
+    .why p {
+      text-align: justify;
     }
 
   /* FOUNDERS */
