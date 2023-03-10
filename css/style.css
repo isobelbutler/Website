@@ -317,6 +317,10 @@
   background: #FA5B52;
   right: 23%;
   top: 23%;
+  animation-name: colour-change-circle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   } 
 
   .who::before {
@@ -331,6 +335,57 @@
   }
 
   /* ANIMATIONS */
+
+  @keyframes colour-change-circle {
+    0% {
+      background: #FA5B52;
+    }
+    50% {
+    background: #ECB08C;
+    }
+    100% {
+      background: #FA5B52;
+    }
+  
+  }
+
+  @keyframes move-about-page {
+    0% {
+      right: 25%;
+      top: 0%;
+      background: #FA5B52;
+    }
+    15% {
+      right: 25%;
+      top: 100%;
+      background: #FE3333;
+    }
+    30% {
+      right: 75%;
+      top: 100%;
+      background: #ECB08C;
+    }
+    45% {
+      right: 75%;
+      top: -10%; 
+      background: #FE3333;
+    }
+
+    60% {
+      right: 100%;
+      top: -10%;
+    }
+
+    75% {
+      right: 100%;
+      top: 25%;
+    }
+
+    100% {
+      right: 0%;
+      top: 75%;
+    }
+  }
 
   @keyframes shrink-grow-interests {
     0% {width: 40%;}
