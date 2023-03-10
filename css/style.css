@@ -35,10 +35,6 @@
       margin-top: -100px; /* means nav doesn't affect vertical centering of h1 */
     }
 
-    h2 {
-      /* font-family: 'neue_haas_grotesk_display75Bd'; */
-    }
-
     h1, h2 {
       font-size: 4em;
       font-weight: 400;
@@ -110,6 +106,13 @@
 
     .founders p {
       text-align: justify;
+    }
+
+
+    .block-1-hidden p {
+      color: #f9f9f9;
+      text-align: center;
+      font-size: 1.25rem;
     }
 
   
@@ -199,9 +202,9 @@
       /* background-color: #FA5B52; */
     }
 
-    #selfie img {
-      /* mix-blend-mode: screen; */
-    }
+    /* #selfie img {
+      mix-blend-mode: screen;
+    } */
 
   /* BLOCK SECTION - image or colour */
     .block-1 {
@@ -209,11 +212,28 @@
       background-size: cover;
       background-position: 0 30%; */
       background-color: #231F20;
-      min-height: 80vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .block-1-show {
+      min-height: 35vh;
       display: grid;
+      row-gap: 40px;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
       align-items: center;
     }
+
+    .block-1-hidden {
+      width: 80%;
+      padding-top: 50px;
+    }
+
+    /* #language_text, #design_text, #people_text, #logic_text, #exercise_text {
+      display: none;
+    } */
 
     .icon1, .icon2 {
       text-align: center;
@@ -221,10 +241,12 @@
 
     .icon1 {
       grid-column-start: span 5;
+      align-self: self-start; /* mean the css animation doesn't make effect neighbouring elements*/
     }
 
     .icon2 {
       grid-row: 2;
+      align-self: self-end;
     }
 
     .icon2 img {
@@ -232,6 +254,13 @@
       filter: invert(100);
       opacity: 80%;
       padding-bottom: 30px;
+      animation-name: shrink-grow-interests;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+
+    .icon2:hover {
+      filter: invert(50%) sepia(11%) saturate(5094%) hue-rotate(324deg) brightness(100%) contrast(97%);
     }
 
   /* WHO 2 */
@@ -240,11 +269,13 @@
       grid-template-columns: 1fr 1fr 1fr; 
       gap: 40px;
       background-color: #F8DFDA;
+      min-height: 100vh;
+
     }
 
-    .interests div {
-      /* text-align: justify; */
-    }
+    /* .interests div {
+      text-align: justify;
+    } */
 
     .interests div:nth-child(3) {
       text-align: center;
@@ -252,7 +283,6 @@
 
     .block-2 {
       background-color: #FA5B52;
-      min-height: 80vh;
     }
 
     .interests div img {
@@ -299,6 +329,15 @@
     right: 33%;
     bottom: 7%;
   }
+
+  /* ANIMATIONS */
+
+  @keyframes shrink-grow-interests {
+    0% {width: 40%;}
+    50% {width: 35%;}
+    100% {width: 40%;}
+  }
+
 
   /* --- MEDIA QUERIES --- */
 

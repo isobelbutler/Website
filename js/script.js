@@ -13,6 +13,8 @@ let exerciseText = document.getElementById('exercise_text');
 let peopleText = document.getElementById('people_text');
 let logicText = document.getElementById('logic_text');
 
+let languagePicture = document.getElementById('language_button img');
+
 languageText.style.display = "none";
 designText.style.display = "none";
 exerciseText.style.display = "none";
@@ -24,7 +26,7 @@ logicText.style.display = "none";
 
 function toggleElement (button, element) {
     if (element.style.display === "none") {
-        element.style.display = "block";
+        element.style.display = "flex";
     } else {
         element.style.display = "none";
     }
