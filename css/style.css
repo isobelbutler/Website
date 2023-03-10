@@ -45,8 +45,7 @@
     } 
 
     h3 {
-      font-size: 2em;
-      color: #F2F2EF;
+      font-size: 2.5em;
     }
 
     h4 {
@@ -81,12 +80,8 @@
       font-weight: 400;}
 
     /* coloured text - Headings */
-    .bluetext, .interests h3 .interests h4 {
+    .bluetext, .interests h3, .interests h4 {
       color: #FA5B52;
-    }
-
-    .interests h3 {
-      font-size: 2.5em;
     }
 
     .interests p {
@@ -118,7 +113,8 @@
   
 /* --- 3. NAVBAR and FOOTER--- */
 
-  .nav-container, .footer-container {
+  .nav-container, 
+  .footer-container {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -132,7 +128,8 @@
     z-index: 100;
   }
 
-  .nav-container li, .footer-container li {
+  .nav-container li, 
+  .footer-container li {
     margin: auto 0; 
     z-index: 100;
   }
@@ -152,7 +149,8 @@
   flex-direction: column;
   }
 
-  .coverpage, header { 
+  .coverpage, 
+  header { 
     /* background-image: url('../images/garden.png');
     background-size: cover;
     background-position: 0 40%; */
@@ -192,25 +190,18 @@
     }
 
     /* this makes the img and it's containing div the same size meaning you can use mix-blend-mode */
-    #selfie, #selfie img {
+    #selfie, 
+    #selfie img {
       height: 300px;
       border-radius: 100%;
     }
     #selfie {
       position: absolute;
       left: 50%;
-      /* background-color: #FA5B52; */
     }
-
-    /* #selfie img {
-      mix-blend-mode: screen;
-    } */
 
   /* BLOCK SECTION - image or colour */
     .block-1 {
-      /* background-image: url('../images/garden.png');
-      background-size: cover;
-      background-position: 0 30%; */
       background-color: #231F20;
       display: flex;
       flex-wrap: wrap;
@@ -223,6 +214,7 @@
       display: grid;
       row-gap: 40px;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+      grid-template-rows: auto 100px;
       align-items: center;
     }
 
@@ -231,10 +223,6 @@
       padding-top: 50px;
     }
 
-    /* #language_text, #design_text, #people_text, #logic_text, #exercise_text {
-      display: none;
-    } */
-
     .icon1, .icon2 {
       text-align: center;
     }
@@ -242,6 +230,7 @@
     .icon1 {
       grid-column-start: span 5;
       align-self: self-start; /* mean the css animation doesn't make effect neighbouring elements*/
+      padding-bottom: 80px;
     }
 
     .icon2 {
@@ -301,7 +290,8 @@
 
   /* FOUNDERS */
 
-  .founders, .footer-container {
+  .founders, 
+  .footer-container {
       background-color: #E9E7E2;
     }
 
@@ -318,10 +308,7 @@
   background: #FA5B52;
   right: 23%;
   top: 23%;
-  animation-name: colour-change-circle;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: colour-change-circle 5s infinite linear;
   } 
 
   .who::before {
@@ -338,55 +325,12 @@
   /* ANIMATIONS */
 
   @keyframes colour-change-circle {
-    0% {
-      background: #FA5B52;
-    }
-    50% {
-    background: #ECB08C;
-    }
-    100% {
-      background: #FA5B52;
-    }
+    0% {background: #FA5B52;}
+    50% {background: #ECB08C;}
+    100% {background: #FA5B52;}
   
   }
 
-  @keyframes move-about-page {
-    0% {
-      right: 25%;
-      top: 0%;
-      background: #FA5B52;
-    }
-    15% {
-      right: 25%;
-      top: 100%;
-      background: #FE3333;
-    }
-    30% {
-      right: 75%;
-      top: 100%;
-      background: #ECB08C;
-    }
-    45% {
-      right: 75%;
-      top: -10%; 
-      background: #FE3333;
-    }
-
-    60% {
-      right: 100%;
-      top: -10%;
-    }
-
-    75% {
-      right: 100%;
-      top: 25%;
-    }
-
-    100% {
-      right: 0%;
-      top: 75%;
-    }
-  }
 
   @keyframes shrink-grow-interests {
     0% {width: 40%;}
