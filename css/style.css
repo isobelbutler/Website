@@ -40,10 +40,13 @@
       font-weight: 400;
     }
 
+    .block-1-show h2 {
+      color: #F2F2EF;
+    } 
+
     h3 {
       font-size: 2em;
       color: #F2F2EF;
-      
     }
 
     h4 {
@@ -78,14 +81,16 @@
       font-weight: 400;}
 
     /* coloured text - Headings */
-    .bluetext, .interests h4 {
-      /* color: #1099ff; */
+    .bluetext, .interests h3 .interests h4 {
       color: #FA5B52;
     }
 
-    .interests div p {
+    .interests h3 {
+      font-size: 2.5em;
+    }
+
+    .interests p {
       font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
-      font-size: 1em;
     }
 
     .white-highlight {
@@ -100,19 +105,14 @@
       font-size: 3em;
     }
     /* WHO body */
-    .who p {
+    .who p, .founders p {
       text-align: justify;
     }
-
-    .founders p {
-      text-align: justify;
-    }
-
 
     .block-1-hidden p {
       color: #f9f9f9;
       text-align: center;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
     }
 
   
@@ -270,14 +270,15 @@
       gap: 40px;
       background-color: #F8DFDA;
       min-height: 100vh;
-
+      display: none;
     }
 
-    /* .interests div {
+    .interests div {
       text-align: justify;
-    } */
+      padding: 15px 0;
+    }
 
-    .interests div:nth-child(3) {
+    .interests div:last-child {
       text-align: center;
     }
 
@@ -409,5 +410,39 @@
     height: auto;
     gap: 20px;
     padding: 30px 0;
+    text-align: center;
   }
 }
+
+@media all and (max-width: 950px) {
+
+  .icon2 h4 {
+    font-size: 1.25em;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .block-1 {
+    display: none;
+  }
+
+  .interests {
+    display: block;
+  }
+
+  section {
+    padding: 7%;
+  }
+}
+
+@media all and (max-width: 660px) {
+  .who-flex-1 {
+    width: 60%;
+  }
+
+  h2, .who h2 {
+    font-size: 2.5em;
+  }
+}
+
+
