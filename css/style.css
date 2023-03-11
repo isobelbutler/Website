@@ -35,7 +35,7 @@ CONTENTS
 
   section:first-child {
     min-height: calc(100vh - 100px); /* means first section height isn't increased by navbar - very sexy */
-        }
+  }
   
 /* --- 2. Fonts --- */
   
@@ -159,12 +159,11 @@ CONTENTS
 /* --- 4. Section Specific Styles --- */
 
   /* Coverpage Sectioin */
-
   .coverpage {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
   }
 
   .coverpage, 
@@ -213,6 +212,8 @@ CONTENTS
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
     grid-template-rows: auto 100px;
     align-items: center;
+    border-bottom: 1px dotted #F2F2EF;
+    padding-bottom: 4em;
   }
 
   .interests-title, 
@@ -242,6 +243,7 @@ CONTENTS
   }
 
   .show:hover {
+    opacity: 100%;
     filter: invert(50%) sepia(11%) saturate(5094%) hue-rotate(324deg) brightness(100%) contrast(97%);
   }
 
@@ -254,6 +256,7 @@ CONTENTS
     min-height: 100vh;
     */
     background-color: #F8DFDA;
+    display: none;
   }
 
   .interests-small-screen div {
@@ -277,10 +280,10 @@ CONTENTS
 
   /* Why Web Development Sectioin */
   .why h2 {
-  text-align: center;
+    text-align: center;
   }
   .why p {
-  text-align: justify;
+    text-align: justify;
   }
 
   /* Colour Block Section */
@@ -289,25 +292,24 @@ CONTENTS
   }
 
   /* Why Founders and Coders Section and Matching Footer Colour */
-
   .founders, 
   .footer-container {
-      background-color: #E9E7E2;
+    background-color: #E9E7E2;
   }
 
 /* --- 5. Pseudo Elements --- */
 
   /* big red circle  */
   .coverpage::before {
-  content: '';
-  position: absolute;  
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  background: #FA5B52;
-  right: 23%;
-  top: 23%;
-  animation: colour-change-circle 5s infinite linear;
+    content: '';
+    position: absolute;  
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background: #FA5B52;
+    right: 23%;
+    top: 23%;
+    animation: colour-change-circle 5s infinite linear;
   } 
 
   /* small red circle  */
@@ -336,7 +338,6 @@ CONTENTS
     50% {width: 35%;}
     100% {width: 40%;}
   }
-
 
 /* --- 7. Media Queries --- */
 

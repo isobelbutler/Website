@@ -1,6 +1,6 @@
-// --- Variables
+// Variables
 
-    // Interests Images - To be mouseovered
+    // Interests Section Images - To be mouseovered
 let languageButton = document.getElementById('language_button');
 let designButton = document.getElementById('design_button');
 let exerciseButton = document.getElementById('exercise_button');
@@ -22,7 +22,7 @@ peopleText.style.display = "none";
 logicText.style.display = "none";
 
 
-// --- Functions
+// Functions
 
     // Toggles between showing/hiding the text - for use interests section on mouseover
 function toggleElement (button, element) {
