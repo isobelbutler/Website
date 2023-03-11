@@ -1,11 +1,26 @@
-/* --- 1. GENERAL --- */
+/* 
+
+CONTENTS 
+1. General Styling
+2. Fonts
+3. Navigation/Header and Footer
+4. Section Specific Styles
+5. Pseudo Elements
+6. Animations
+7. Media Queries
+
+*/
+
+/* --- 1. General Styling --- */
 
   html {
     box-sizing: border-box;
     background-color: #f9f9f9;
   }
     
-  *, *::before, *::after {
+  *, 
+  *::before, 
+  *::after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
@@ -22,96 +37,99 @@
     min-height: calc(100vh - 100px); /* means first section height isn't increased by navbar - very sexy */
         }
   
-/* --- 2. FONTS --- */
-    
-    body {
-      font-family: 'neue_haas_grotesk_display65Md', 'Manrope', sans-serif;
-    }
-
-    h1 {
-      text-align: center;
-      color:#FE4632;
-      z-index: 1;
-      margin-top: -100px; /* means nav doesn't affect vertical centering of h1 */
-    }
-
-    h1, h2 {
-      font-size: 4em;
-      font-weight: 400;
-    }
-
-    .block-1-show h2 {
-      color: #F2F2EF;
-    } 
-
-    h3 {
-      font-size: 2.5em;
-    }
-
-    h4 {
-      font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
-      font-size: 1.5em;
-      color: #F2F2EF;
-    }
-
-    p, .who a {
-      font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
-      font-size: 1.5rem;
-      margin: 1.5rem 0;
-      line-height: 1.5;
-      color: #1A1A1A;
-    }
-
-    /* links */
-    a {
-      text-decoration: none;
-      text-transform: lowercase;
-      font-weight: 700;
-      color: #ECB08C;
-      font-size: 1.7em;
-    }
-
-    /* navlink hover, link to other website,  */
-    .who a, a:hover {
-      text-decoration: underline;
-    }
-
-    .who a {
-      font-weight: 400;}
-
-    /* coloured text - Headings */
-    .bluetext, .interests h3, .interests h4 {
-      color: #FA5B52;
-    }
-
-    .interests p {
-      font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
-    }
-
-    .white-highlight {
-      background-color: #E9E7E2;
-    }
-
-    .line-through {
-      text-decoration: line-through;
-    }
-
-    .who h2 {
-      font-size: 3em;
-    }
-    /* WHO body */
-    .who p, .founders p {
-      text-align: justify;
-    }
-
-    .block-1-hidden p {
-      color: #f9f9f9;
-      text-align: center;
-      font-size: 1.15rem;
-    }
-
+/* --- 2. Fonts --- */
   
-/* --- 3. NAVBAR and FOOTER--- */
+  /* default */
+  body {
+    font-family: 'neue_haas_grotesk_display65Md', 'Manrope', sans-serif;
+  }
+
+  /* headings */
+  h1 {
+    text-align: center;
+    color:#FE4632;
+    z-index: 1;
+    margin-top: -100px; /* means nav doesn't affect vertical centering of h1 */
+  }
+
+  h1, 
+  h2 {
+    font-size: 4em;
+    font-weight: 400;
+  }
+
+  .who h2 {
+    font-size: 3em;
+  }
+
+  .show-container h2 {
+    color: #F2F2EF;
+  } 
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  .bluetext, 
+  .interests-small-screen h3, 
+  .interests-small-screen h4 {
+    color: #FA5B52;
+  }
+
+  h4 {
+    font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+    font-size: 1.5em;
+    color: #F2F2EF;
+  }
+
+  /* links and main paragraph */
+  p, 
+  .who a {
+    font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+    color: #1A1A1A;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: lowercase;
+    font-weight: 700;
+    color: #ECB08C;
+    font-size: 1.7em;
+  }
+
+  .who a, 
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .who a {
+    font-weight: 400;}
+
+  /* paragraphs */
+  .who p, 
+  .founders p {
+    text-align: justify;
+  }
+
+  .hide p {
+    color: #f9f9f9;
+    text-align: center;
+    font-size: 1.15rem;
+  }
+
+  .interests-small-screen p {
+    font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+  }
+
+  /* decorative */
+  .line-through {
+    text-decoration: line-through;
+  }
+
+/* --- 3. Navigation/Header and Footer --- */
 
   .nav-container, 
   .footer-container {
@@ -138,9 +156,9 @@
     flex-grow: 2;
   }
 
-/* --- 4. SECTION STYLES */
+/* --- 4. Section Specific Styles --- */
 
-  /* COVERPAGE */
+  /* Coverpage Sectioin */
 
   .coverpage {
   display: flex;
@@ -151,155 +169,136 @@
 
   .coverpage, 
   header { 
-    /* background-image: url('../images/garden.png');
-    background-size: cover;
-    background-position: 0 40%; */
-    /* opacity: 40%;  */
     background-color: #F2F2EF;
    }
 
-  /* WHO */
-    .who {
-      background-color: #E9E7E2;
-      overflow: hidden; /* stops image creating scrollbar */
-      display: flex;
-      flex-direction: column;      
-      padding: 10% 5%;
-      gap: 60px;
-      position: relative; /* allows you to add pseudo elements */
-    }
+  /* Who I Am Section */
+  .who {
+    background-color: #E9E7E2;
+    overflow: hidden; /* stops image creating scrollbar */
+    display: flex;
+    flex-direction: column;      
+    padding: 10% 5%;
+    gap: 60px;
+    position: relative; /* allows you to add pseudo elements */
+  }
 
-    .who p:first-child {
-      border-top: 1px solid #62615F;
-      padding-top: 2em;
-    }
+  .who p:first-child {
+    border-top: 1px solid #62615F;
+    padding-top: 2em;
+  }
 
-    /* NB - MAYBE CHANGE TO GRID AND ADD AN IMAGE TOP RIGHT OF THIS SECTION? */
-    .who-flex-1 {
-      width: 45%;
-    }
+  .who-flex-1 {
+    width: 45%;
+  }
 
-    .who-flex-2 {
-      margin: 0 auto;
-      width: 70%;
-    }
+  .who-flex-2 {
+    margin: 0 auto;
+    width: 70%;
+  }
 
-    #outer_selfie {
-      position: relative;
-      height: 120px; /* adds space below to mean image will show but be cropped */
-    }
+  /* Interests Section - Larger Screens */
+  .interests {
+    background-color: #231F20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 
-    /* this makes the img and it's containing div the same size meaning you can use mix-blend-mode */
-    #selfie, 
-    #selfie img {
-      height: 300px;
-      border-radius: 100%;
-    }
-    #selfie {
-      position: absolute;
-      left: 50%;
-    }
+  .show-container {
+    min-height: 35vh;
+    display: grid;
+    row-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: auto 100px;
+    align-items: center;
+  }
 
-  /* BLOCK SECTION - image or colour */
-    .block-1 {
-      background-color: #231F20;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: flex-start;
-    }
+  .interests-title, 
+  .show {
+    text-align: center;
+  }
 
-    .block-1-show {
-      min-height: 35vh;
-      display: grid;
-      row-gap: 40px;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-      grid-template-rows: auto 100px;
-      align-items: center;
-    }
+  .interests-title {
+    grid-column-start: span 5;
+    align-self: self-start; /* mean the css animation doesn't make effect neighbouring elements*/
+    padding-bottom: 80px;
+  }
 
-    .block-1-hidden {
-      width: 80%;
-      padding-top: 50px;
-    }
+  .show {
+    grid-row: 2;
+    align-self: self-end;
+  }
 
-    .icon1, .icon2 {
-      text-align: center;
-    }
+  .show img {
+    width: 40%;
+    filter: invert(100);
+    opacity: 80%;
+    padding-bottom: 30px;
+    animation-name: shrink-grow-interests;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
 
-    .icon1 {
-      grid-column-start: span 5;
-      align-self: self-start; /* mean the css animation doesn't make effect neighbouring elements*/
-      padding-bottom: 80px;
-    }
+  .show:hover {
+    filter: invert(50%) sepia(11%) saturate(5094%) hue-rotate(324deg) brightness(100%) contrast(97%);
+  }
 
-    .icon2 {
-      grid-row: 2;
-      align-self: self-end;
-    }
+  /* Interests Section - Shows On Smaller Screens */
+  .interests-small-screen {
+    /* NB: This was the styling for when used on bigger screens.
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 40px; 
+    min-height: 100vh;
+    */
+    background-color: #F8DFDA;
+  }
 
-    .icon2 img {
-      width: 40%;
-      filter: invert(100);
-      opacity: 80%;
-      padding-bottom: 30px;
-      animation-name: shrink-grow-interests;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-    }
+  .interests-small-screen div {
+    text-align: justify;
+    padding: 15px 0;
+  }
 
-    .icon2:hover {
-      filter: invert(50%) sepia(11%) saturate(5094%) hue-rotate(324deg) brightness(100%) contrast(97%);
-    }
+  .interests-small-screen div:last-child {
+    text-align: center;
+  }
 
-  /* WHO 2 */
-    .interests {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr; 
-      gap: 40px;
-      background-color: #F8DFDA;
-      min-height: 100vh;
-      display: none;
-    }
+  .hide {
+    width: 80%;
+    padding-top: 50px;
+  }
 
-    .interests div {
-      text-align: justify;
-      padding: 15px 0;
-    }
+  .interests-small-screen img {
+    max-width: 60%;
+    border-radius: 100%;
+  }
 
-    .interests div:last-child {
-      text-align: center;
-    }
+  /* Why Web Development Sectioin */
+  .why h2 {
+  text-align: center;
+  }
+  .why p {
+  text-align: justify;
+  }
 
-    .block-2 {
-      background-color: #FA5B52;
-    }
+  /* Colour Block Section */
+  .block-2 {
+    background-color: #FA5B52;
+  }
 
-    .interests div img {
-      max-width: 80%;
-      border-radius: 100%;
-    }
-
-  /* WHY */
-    .why h2 {
-      text-align: center;
-    }
-    .why p {
-      text-align: justify;
-    }
-
-  /* FOUNDERS */
+  /* Why Founders and Coders Section and Matching Footer Colour */
 
   .founders, 
   .footer-container {
       background-color: #E9E7E2;
-    }
+  }
 
-/* PSEUDO ELEMENTS */
+/* --- 5. Pseudo Elements --- */
 
-  /* red circle  */
+  /* big red circle  */
   .coverpage::before {
-  /* z-index: -1; */
   content: '';
   position: absolute;  
   width: 70px;
@@ -311,6 +310,7 @@
   animation: colour-change-circle 5s infinite linear;
   } 
 
+  /* small red circle  */
   .who::before {
     content: '';
     position: absolute;  
@@ -322,7 +322,7 @@
     bottom: 7%;
   }
 
-  /* ANIMATIONS */
+/* --- 6. Animations --- */
 
   @keyframes colour-change-circle {
     0% {background: #FA5B52;}
@@ -331,7 +331,6 @@
   
   }
 
-
   @keyframes shrink-grow-interests {
     0% {width: 40%;}
     50% {width: 35%;}
@@ -339,54 +338,54 @@
   }
 
 
-  /* --- MEDIA QUERIES --- */
+/* --- 7. Media Queries --- */
 
-@media all and (max-width: 1200px) {  
-
-  .nav-container li:first-child {
-    display: none;
-  }
+  @media all and (max-width: 1200px) {  
+    .nav-container li:first-child {
+      display: none;
+    }
       
-  .nav-container, .footer-container {
-    justify-content: flex-end;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: auto;
-    gap: 20px;
-    padding: 30px 0;
-    text-align: center;
-  }
-}
-
-@media all and (max-width: 950px) {
-
-  .icon2 h4 {
-    font-size: 1.25em;
-  }
-}
-
-@media all and (max-width: 750px) {
-  .block-1 {
-    display: none;
+    .nav-container, 
+    .footer-container {
+      justify-content: flex-end;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      height: auto;
+      gap: 20px;
+      padding: 30px 0;
+      text-align: center;
+    }
   }
 
-  .interests {
-    display: block;
+  @media all and (max-width: 950px) {
+    .show h4 {
+      font-size: 1.25em;
+    }
   }
 
-  section {
-    padding: 7%;
-  }
-}
+  @media all and (max-width: 750px) {
+    .interests {
+      display: none;
+    }
 
-@media all and (max-width: 660px) {
-  .who-flex-1 {
-    width: 60%;
+    .interests-small-screen {
+      display: block;
+    }
+
+    section {
+      padding: 7%;
+    }
   }
 
-  h2, .who h2 {
-    font-size: 2.5em;
+  @media all and (max-width: 660px) {
+    .who-flex-1 {
+      width: 60%;
+    }
+
+    h2, 
+    .who h2 {
+      font-size: 2.5em;
+    }
   }
-}
 
 
