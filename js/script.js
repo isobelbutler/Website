@@ -41,31 +41,31 @@ let gallery = [
      image: 'images/gallery.png',
      project: 'Project Gallery',
      link: '#project-gallery',
-     caption: 'A flex-box layout gallery of the completed application projects.',
+     caption: 'You\'re currently looking at this! A flex-box layout gallery of the completed application projects, and a couple of other side bits.',
    },
    {
      image: 'images/game.png',
      project: 'Feature',
      link: 'https://isobelbutler.github.io/Game/',
-     caption: 'A farm harvest game.',
+     caption: 'A farming game called \'Farmer Froggy\'s Harvest Game\'. Players are given order requests, and must sow and harvest crops in order to earn coins, and complete the game.',
    },
    {
      image: 'images/oldwebsite.png',
      project: 'Portfolio',
      link: 'https://isobelbutler.co.uk/',
-     caption: 'My old WordPress work website.',
+     caption: 'I originally built this site back in 2018 whilst first learning CSS and HTML and it became a kind of online CV for my TV work. Throughout the years it\'s had many redesigns, and is due another one. A couple of years ago I converted it to WordPress. I\'d like to move away from WordPress again and want to completely rebuild it now that my coding knowledge has improved.',
    },
    {
      image: 'images/soak.png',
      project: 'Soak Services',
      link: 'https://www.soak.services/',
-     caption: 'A onepage, static website for a small drainage company.',
+     caption: 'Whilst building my Founders and Coders application I built a onepage, static website for a small drainage company using HTML and CSS. The company wanted a simple website to give them a better online presence that clearly explained their business. I wrote the copy, and designed and built the site.',
    },
    {
      image: 'images/wealden.png',
      project: 'Wealden Green Party',
      link: 'https://wealden.greenparty.org.uk/',
-     caption: 'A wordpress redesign for the Wealden Green Party. This used existing templates created by the Green Party.',
+     caption: 'Whilst working in TV I offered to redesign my hometown\'s Green Party constituency\'s website. Their existing site was a crowded, static site which was difficult to navigate. The wider Green Party was using WordPress and wanted to move all local constituency websites to WordPress. I worked with existing templates created by the Green Party, added my own, and created their new design which allows them to easily add articles and news to the site.',
    }
 
  ];
