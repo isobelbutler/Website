@@ -239,6 +239,7 @@ CONTENTS
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+    min-height: 110vh; /* allows for extra height created by mouseover text - stops section from shrinking/growing */
   }
 
   .show-container {
