@@ -22,7 +22,7 @@ let gallery = [
    {
      image: 'images/website.png',
      project: 'Main Website',
-     link: '#project-gallery',
+     link: '#',
      caption: 'Who I am, why I want to be a developer, and what I\'ve learned so far.',
    },
    {
