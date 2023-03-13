@@ -51,7 +51,7 @@ let gallery = [
    },
    {
      image: 'images/oldwebsite.png',
-     project: 'Portfolio',
+     project: 'Personal Website',
      link: 'https://isobelbutler.co.uk/',
      caption: 'I originally built this site back in 2018 whilst first learning CSS and HTML and it became a kind of online CV for my TV work. Throughout the years it\'s had many redesigns, and is due another one. A couple of years ago I converted it to WordPress. I\'d like to move away from WordPress again and want to completely rebuild it now that my coding knowledge has improved.',
    },
