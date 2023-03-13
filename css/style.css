@@ -87,7 +87,7 @@ CONTENTS
   }
 
   .bluetext, 
-  .interests-small-screen h3, 
+  .interests-small-screen h2, 
   .interests-small-screen h4 {
     color: #FA5B52;
   }
@@ -482,12 +482,41 @@ CONTENTS
   }
 
   @media all and (max-width: 660px) {
+    a {
+      font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+    }
+
     .who-flex-1 {
       width: 60%;
+    }
+
+    .who-flex-2 {
+      width: 96%;
     }
 
     h2, 
     .who h2 {
       font-size: 2.5em;
     }
+
+    /* small red circle  */
+    .who::before {
+      bottom: 2%;
+    }
+
+    p, .who a {
+      font-size: 1em;
+    }
+
+    .plus-symbol {
+      font-size: 2em;
   }
+
+  .who p, 
+  .founders p, 
+  .interests-small-screen div,
+  .why p {
+    text-align: left;
+  }
+
+}
