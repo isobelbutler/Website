@@ -2,7 +2,8 @@
 # Application Website
 
 ## Table of Contents
-1. [Planning](#Planning) 
+1. [Planning](#Planning)  
+ 
   a. [Colour Palettes](#colour-palettes)  
   b. [Figma Design](#original-figma-design) 
 
@@ -45,7 +46,7 @@ When I go to find colours, I either use coolors.co or I browse websites and use 
 ## Building
 
 1. Add skeleton HTML and CSS to recreate Figma Design.
-2. Add pseudo-element background shapes and selfie.
+2. Add pseudo-element background shapes, and an absolute positioned selfie.
 3. Create responsive navbar.
 4. Style redesign.
     - Change main fonts.
@@ -64,6 +65,57 @@ When I go to find colours, I either use coolors.co or I browse websites and use 
 
 
 ## Debugging
+
+### Issue: Getting the selfie image to be one tone (not in final version).
+
+I wanted a selfie which would be masked with the red accent colour of my first colour palette. I didn't want to do this through editing the actual image, as I thought I might want to change the colour. I wanted to come up with a way of doing it through CSS. 
+
+**Original code:**
+```html
+<div id="outer_selfie">
+                    <div id="selfie">
+                        <img src="images/profile_img.PNG">
+                    </div>
+                </div>
+```
+
+```css
+#outer_selfie {
+      position: relative;
+      height: 120px; /* adds space below to mean image will show but be cropped */
+    }
+
+   #selfie img {
+      height: 300px;
+      border-radius: 100%;
+    }
+    #selfie {
+      position: absolute;
+      left: 50%;
+    }
+```
+
+**Solution:**.  
+I made it so that *#selfie* and the image it contained were exactly the same height and width, so that they were two layered divs. I then added a background-color to the outer div, and used *mix-blend-mode: screen* on the image to get the final effect.
+
+
+```css
+    #selfie, #selfie img {
+      height: 300px;
+      border-radius: 100%;
+    }
+
+    #selfie {
+      position: absolute;
+      left: 50%;
+      background-color: #ff1e00;
+    }
+
+    #selfie img {
+      mix-blend-mode: screen; 
+    }
+```
+
 
 ### Issue: Getting the interests section show/hide working properly.
 I originally planned to have the user click on an interest icon and a dropdown would appear with text about that interest. However, I changed plans and decided to go for a mouseover as I hadn't used them before and thought it would make for a nice, smooth user interaction.
