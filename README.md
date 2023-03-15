@@ -3,7 +3,7 @@
 
 ## Table of Contents
 1. [Planning](#Planning)  
- 
+
   a. [Colour Palettes](#colour-palettes)  
   b. [Figma Design](#original-figma-design) 
 
@@ -12,9 +12,9 @@
 
 ## Planning
 
-Before starting building this site I chose the colour palette and created an initial design on Figma. I wanted something quite simple, with strong accent colours to keep the page interesting. The actual design of the site took a U-turn when I'd already built it. I felt like the strong accent colours weren't particularly reflective of who I am, and chose to go for a softer, more tonal palette, yet still with strong accent colours. This felt more inviting, and more of a personal website, rather than the original choices which in hindsight feel quite cold and corporate.
+Before starting the build of this site I chose a colour palette and created an initial design on Figma. I wanted something quite simple, with strong accent colours to keep the page interesting. The actual design of the site took a U-turn after I'd already built it. I wasn't happy with the original design and felt like the strong accent colours weren't particularly reflective of who I am. I decided to go for a softer, more tonal palette, yet still with one strong accent colour. I was pleased with this redesign as it felt more inviting and personal, rather than the original choices which in hindsight feel quite cold and corporate.
 
-When I go to find colours, I either use coolors.co or I browse websites and use an app called ColorSlurp to pick out and save colours I like. It means when I go to change a palette, I've already got a whole selection to choose from.
+To find colours, I either use coolors.co or I browse websites and use an app called ColorSlurp to pick out and save colours I like. It means when I go to change a palette, I've already got a whole selection to choose from.
 
 ### Colour Palettes
 #### First Design:
