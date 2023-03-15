@@ -2,8 +2,7 @@
 # Application Website
 
 ## Table of Contents
-1. [Planning](#Planning)  
-
+1. [Planning](#Planning) 
   a. [Colour Palettes](#colour-palettes)  
   b. [Figma Design](#original-figma-design) 
 
@@ -12,9 +11,9 @@
 
 ## Planning
 
-Before starting the build of this site I chose a colour palette and created an initial design on Figma. I wanted something quite simple, with strong accent colours to keep the page interesting. The actual design of the site took a U-turn after I'd already built it. I wasn't happy with the original design and felt like the strong accent colours weren't particularly reflective of who I am. I decided to go for a softer, more tonal palette, yet still with one strong accent colour. I was pleased with this redesign as it felt more inviting and personal, rather than the original choices which in hindsight feel quite cold and corporate.
+Before starting building this site I chose the colour palette and created an initial design on Figma. I wanted something quite simple, with strong accent colours to keep the page interesting. The actual design of the site took a U-turn when I'd already built it. I felt like the strong accent colours weren't particularly reflective of who I am, and chose to go for a softer, more tonal palette, yet still with strong accent colours. This felt more inviting, and more of a personal website, rather than the original choices which in hindsight feel quite cold and corporate.
 
-To find colours, I either use coolors.co or I browse websites and use an app called ColorSlurp to pick out and save colours I like. It means when I go to change a palette, I've already got a whole selection to choose from.
+When I go to find colours, I either use coolors.co or I browse websites and use an app called ColorSlurp to pick out and save colours I like. It means when I go to change a palette, I've already got a whole selection to choose from.
 
 ### Colour Palettes
 #### First Design:
@@ -53,9 +52,9 @@ To find colours, I either use coolors.co or I browse websites and use an app cal
     - Edit layout.
     - Remove pseudo element selfie.
     - Change the entire colour palette.
-5. Added a static section about my interests.
-6. Added CSS animations.
-6. Changed interests section to be more interactive using mouseovers which hide/show divs.
+5. Add a static section about my interests.
+6. Add CSS animations.
+6. Change interests section to be more interactive using mouseovers which hide/show divs.
 7. Tweak copy for all sections.
 8. Add media queries.
 9. Merge the project gallery.
@@ -66,32 +65,60 @@ To find colours, I either use coolors.co or I browse websites and use an app cal
 
 ## Debugging
 
-### Issue: Getting the interests section mouseover event handler working properly.
+### Issue: Getting the interests section show/hide working properly.
+I originally planned to have the user click on an interest icon and a dropdown would appear with text about that interest. However, I changed plans and decided to go for a mouseover as I hadn't used them before and thought it would make for a nice, smooth user interaction.
 
+What I didn't realise is that without a mouseout handler, the text wouldn't hide after being hovered on. 
 
 **Original code:**
 ```javascript
-
+languageButton.addEventListener('mouseover', function() {
+    toggleElement(languageButton, languageText);
+});
 
 ```
 
-**Solution:**
+**Solution:**.  
+
+After some research, I realised that I needed to pair the mouseover with a mouseout handler, to make the text disappear when not hovering over the icon:
 
 ```javascript
-
+languageButton.addEventListener('mouseout', function() {
+    toggleElement(languageButton, languageText);
+});
 ```
 
 ### Issue: Getting interests section to appear nicely on mobiles.
 
+After I built the interactive interests section, I realised that it wasn't appearing nicely on mobiles as the icons appeared all in line, and were very small. I considered switching the layout to a flexbox layout which would wrap on smaller screens, but felt like it wouldn't be very user friendly. Instead, I decided to use the code that I had originally built the interests section with in combination with media queries, so that the display would switch from none to block.
 
-**Original code:**
-```javascript
-
-
-```
+Whilst this meant the section wasn't interactive on a mobile, it felt like it was a good way to make sure the information was clear, and easy to navigate.
 
 **Solution:**
 
-```javascript
+```html
+<section class="interests-small-screen">
+                <div>
+                    <h2>What brings me joy?</h2>
+                </div>
+                <div>
+                    <h4>Language</h4>
+                    <p>
+                        I believe that language holds a lot of power. It’s at the core of human connection
+                        and through the smallest change in syntax you can completely alter meaning - I think 
+                        this is beautiful. I studied English Language and Literature at the University 
+                        of Leeds and believe that meaning is conveyed best through clear, concise language.
+                    </p>
+                </div>
+            ...
+```
+```css
+@media all and (max-width: 750px) {
+    .interests {
+      display: none;
+    }
 
+    .interests-small-screen {
+      display: block;
+    }
 ```
