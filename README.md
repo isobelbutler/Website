@@ -2,7 +2,8 @@
 # Application Website
 
 ## Table of Contents
-1. [Planning](#Planning) 
+1. [Planning](#Planning)  
+ 
   a. [Colour Palettes](#colour-palettes)  
   b. [Figma Design](#original-figma-design) 
 
