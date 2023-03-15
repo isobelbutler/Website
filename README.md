@@ -10,7 +10,7 @@
 
 ### Colour Palettes
 #### First Design:
-| Original Colour             | Hex                                                                |
+| Use             | Colour/Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Main Background | ![#F9F9F9](https://via.placeholder.com/10/F9F9F9?text=+) #F9F9F9 |
 | Background Accent | ![#FE1E00](https://via.placeholder.com/10/fe1e00?text=+) #FE1E00 |
@@ -19,7 +19,7 @@
 
 
 #### Final Design:
-| Original Colour             | Hex                                                                |
+| Use             | Colour/Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Section Background | ![#F2F2EF](https://via.placeholder.com/10/F2F2EF?text=+) #F2F2EF |
 | Section Background | ![#E9E7E2](https://via.placeholder.com/10/E9E7E2?text=+) #E9E7E2 |
