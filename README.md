@@ -12,7 +12,7 @@
 
 ## Planning
 
-Before starting building this site I chose the colour palette and created an initial design on Figma. I wanted something quite simple, with strong accent colours to keep the page interesting. The actual design of the site took a U-turn when I'd already built it. I felt like the strong accent colours weren't particularly reflective of who I am, and chose to go for a softer, more tonal palette, yet still with strong accent colours. This felt more inviting, and more of a personal website, rather than the original choices which in hindsight feel quite cold and corporate.
+Before building this site I chose the colour palette and created an initial design on Figma. I wanted something quite simple, with strong accent colours to keep the page interesting. The actual design of the site took a U-turn when I'd already built it. I felt like the strong accent colours weren't particularly reflective of who I am, and chose to go for a softer, more tonal palette, yet still with strong accent colours. This felt more inviting, and more of a personal website, rather than the original choices which in hindsight feel quite cold and corporate.
 
 When I go to find colours, I either use coolors.co or I browse websites and use an app called ColorSlurp to pick out and save colours I like. It means when I go to change a palette, I've already got a whole selection to choose from.
 
@@ -96,7 +96,7 @@ I wanted a selfie which would be masked with the red accent colour of my first c
 ```
 
 **Solution:**.  
-I made it so that *#selfie* and the image it contained were exactly the same height and width, so that they were two layered divs. I then added a background-color to the outer div, and used *mix-blend-mode: screen* on the image to get the final effect.
+I made it so that *#selfie* and the image it contained were exactly the same height and width, so that they were two layered divs. I then added a background-color to the outer div and used *mix-blend-mode: screen* on the image to get the final effect.
 
 
 ```css
@@ -142,7 +142,7 @@ languageButton.addEventListener('mouseout', function() {
 
 ### Issue: Getting interests section to appear nicely on mobiles.
 
-After I built the interactive interests section, I realised that it wasn't appearing nicely on mobiles as the icons appeared all in line, and were very small. I considered switching the layout to a flexbox layout which would wrap on smaller screens, but felt like it wouldn't be very user friendly. Instead, I decided to use the code that I had originally built the interests section with in combination with media queries, so that the display would switch from none to block.
+After I built the interactive interests section, I realised that it wasn't appearing nicely on mobiles as the icons appeared all in line, and were very small. I considered switching the layout to flexbox which would wrap on smaller screens but felt like it wouldn't be very user friendly. Instead, I decided to use the code that I had originally built the interests section with in combination with media queries, so that the display would switch from none to block.
 
 Whilst this meant the section wasn't interactive on a mobile, it felt like it was a good way to make sure the information was clear, and easy to navigate.
 
