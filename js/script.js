@@ -132,7 +132,7 @@ logicButton.addEventListener('mouseout', function() {
 });
 
 // Loops
-    // Creates the Project Gallery Repeated Cards from the Data Object
+    // Creates the Project Gallery repeated Cards from the gallery object and renders it in the DOM
   for (let i = 0; i < gallery.length; i++) {
     let card = gallery[i];
     html +=
@@ -151,21 +151,17 @@ logicButton.addEventListener('mouseout', function() {
         </div>
       </div>`;  
 }
-
 document.querySelector('.gallery-container').insertAdjacentHTML('beforeend', html); 
 
-    // Adds the show/hide caption to each Project Gallery Card
+  // Adds the show/hide caption to each Project Gallery card
 for (let i = 0; i < gallery.length; i++) {
-
-document.querySelectorAll(".plus-symbol")[i].addEventListener("click", function() {
-
-  var x = document.querySelectorAll(".captionHide")[i]; // By using querySelectorAll and captionHide as a class, you can select which index number to affect.
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  
-});
+  document.querySelectorAll(".plus-symbol")[i].addEventListener("click", function() {
+    var x = document.querySelectorAll(".captionHide")[i]; // by using querySelectorAll and captionHide as a class, you can select which index number to affect.
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    } 
+  });
 }
 
